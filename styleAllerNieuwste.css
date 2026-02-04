@@ -379,3 +379,133 @@ body::before {
     
 }
 
+@media (max-width: 1024px) {
+    .grid {
+        grid-template-columns: 180px 1fr 180px;
+        column-gap: 20px;
+    }
+
+    .page-leftbar,
+    .page-rightbar {
+        max-width: 180px;
+        padding: 20px 15px;
+    }
+
+    .page-main img {
+        max-width: 70%;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "header"
+            "main"
+            "left"
+            "right"
+            "footer";
+        row-gap: 25px;
+    }
+
+    .page-leftbar,
+    .page-rightbar {
+        margin: 0 auto;
+        max-width: 90%;
+        width: 100%;
+        text-align: center;
+    }
+
+    .TopNav {
+        padding-left: 0;
+        gap: 10px;
+    }
+
+    .TopNav a {
+        font-size: 1rem;
+        padding: 10px 15px;
+    }
+
+    .mainContentText,
+    .mainContentText2,
+    .mainContentText3 {
+        padding: 30px 20px;
+    }
+
+    .mainContentText p,
+    .mainContentText2 p,
+    .mainContentText3 p {
+        font-size: 1.1rem;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .page-header h1 {
+        font-size: 1.8rem;
+    }
+
+    .TopNav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .TopNav a {
+        width: 100%;
+        text-align: center;
+        font-size: 1rem;
+    }
+
+    .dropdown-content {
+        position: static;
+        transform: none;
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        background: rgba(0, 0, 0, 0.4);
+        margin-top: 10px;
+    }
+
+    .dropdown:hover .dropdown-content {
+        transform: none;
+    }
+
+    .page-main img {
+        max-width: 90%;
+    }
+
+    .mainContentText img,
+    .mainContentText2 img,
+    .mainContentText3 img {
+        max-width: 15%;
+    }
+
+    .footer .social-media {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+
+@media (max-width: 360px) {
+    body {
+        font-size: 14px;
+    }
+
+    .TopNav a {
+        padding: 8px 10px;
+        font-size: 0.95rem;
+    }
+
+    .mainContentText h2,
+    .mainContentText2 h2,
+    .mainContentText3 h2 {
+        font-size: 1.5rem;
+    }
+
+    .producten-button {
+        width: 100%;
+        text-align: center;
+    }
+}
