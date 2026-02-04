@@ -78,7 +78,7 @@ body img {
 
 .TopNav {
     display: flex;
-    justify-content: left;
+    justify-content: center;
     padding-left: 50px;
     flex-wrap: wrap;
     gap: 15px;
@@ -176,7 +176,7 @@ body img {
 }
 
 .mainContentText,
-.mainContentText img {
+.mainContentText img, .mainContentText2, .mainContentText3{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -191,11 +191,18 @@ body img {
     text-align: center;
 }
 
+.mainContentText p, .mainContentText2 p, .mainContentText3 p{
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    max-width: 800px;
+}
+
 .backgroundImage {
     pointer-events: none;
 }
 
-.mainContentText h2 {
+.mainContentText h2, .mainContentText2 h2, .mainContentText3 h2{
     font-size: 2rem;
     margin-bottom: 20px;
 }
@@ -203,6 +210,13 @@ body img {
 .page-main img {
     max-width: 50%;
     height: auto;
+}
+.mainContentText img , .mainContentText2 img, .mainContentText3 img{
+    max-width: 5%;
+    height: auto;
+    bottom: 0;
+    z-index: 100;
+    position: relative;
 }
 
 
@@ -276,7 +290,7 @@ body::before {
     outline-offset: 4px;
 }
 
-.dropdown {
+.dropdown, .dropdownProducten, .dropdownOverOns {
     position: relative;
 }
 
@@ -306,8 +320,6 @@ body::before {
     content: "";
     position: absolute;
     top: 100%;
-    left: -20px;
-    right: -20px;
     height: 30px;
 }
 
@@ -327,7 +339,7 @@ body::before {
 }
 
 
-.dropbtn {
+.dropbtn, .dropbtnOverOns, .dropbtnProducten {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -352,7 +364,7 @@ body::before {
 
 .producten-button {
     transition: all 1.5s ease;
-    box-shadow: 0 0 20px #000000;
+    border: 1px solid var(--color-text);
     color: var(--color-text);
     border-radius: 50px;
     text-decoration: none;
@@ -364,12 +376,6 @@ body::before {
     transform: scale(1.15);
     box-shadow: 0 0 20px #000000;
     padding: 10px 20px;
+    
 }
 
-.mainContentText img {
-    max-width: 20%;
-    height: auto;
-    bottom: 0;
-    z-index: 100;
-    position: relative;
-}
