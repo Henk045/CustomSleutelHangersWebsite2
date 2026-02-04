@@ -13,6 +13,11 @@
     --color-accent: hsl(271, 80%, 80%);
 }
 
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
 html {
     width: 100%;
     height: 100%;
@@ -464,3 +469,32 @@ body::before {
         visibility: hidden;
     }
 }
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+@media (max-width: 768px) {
+    body img {
+        position: absolute;
+    }
+
+    .grid {
+        column-gap: 0;
+        max-width: 100vw;
+    }
+
+    .page-leftbar,
+    .page-rightbar {
+        width: 100%;
+        max-width: 90%;
+    }
+
+    .dropdown-content {
+        min-width: 100%;
+        width: 100%;
+    }
+}
+
+
