@@ -400,14 +400,8 @@ body::before {
 @media (max-width: 768px) {
     .grid {
         grid-template-columns: 1fr;
-        grid-template-areas:
-            "header"
-            "main"
-            "left"
-            "right"
-            "footer";
-        row-gap: 25px;
     }
+}
 
     .page-leftbar,
     .page-rightbar {
