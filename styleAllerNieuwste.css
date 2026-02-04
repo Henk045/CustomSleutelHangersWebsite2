@@ -432,7 +432,12 @@ body::before {
     .mainContentText3 p {
         font-size: 1.1rem;
     }
-}
+
+    .mainContentText h2,
+    .mainContentText2 h2,
+    .mainContentText3 h2 {
+        font-size: 1.5rem;
+    }
 
 
 @media (max-width: 480px) {
@@ -440,16 +445,6 @@ body::before {
         font-size: 1.8rem;
     }
 
-    .TopNav {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .TopNav a {
-        width: 100%;
-        text-align: center;
-        font-size: 1rem;
-    }
 
     .dropdown-content {
         position: static;
@@ -487,10 +482,7 @@ body::before {
         font-size: 14px;
     }
 
-    .TopNav a {
-        padding: 8px 10px;
-        font-size: 0.95rem;
-    }
+
 
     .mainContentText h2,
     .mainContentText2 h2,
