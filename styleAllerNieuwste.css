@@ -384,7 +384,7 @@ body::before {
     
 }
 
-@media (max-width: 1024px) {
+/* @media (max-width: 1024px) {
     .grid {
         grid-template-columns: 180px 1fr 180px;
         column-gap: 20px;
@@ -497,4 +497,4 @@ html, body {
     }
 }
 
-
+ */
