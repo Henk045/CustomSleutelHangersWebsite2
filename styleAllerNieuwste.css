@@ -396,12 +396,10 @@ body::before {
     }
 }
 
-
 @media (max-width: 768px) {
     .grid {
         grid-template-columns: 1fr;
     }
-}
 
     .page-leftbar,
     .page-rightbar {
@@ -438,60 +436,31 @@ body::before {
     .mainContentText3 h2 {
         font-size: 1.5rem;
     }
-
+}
 
 @media (max-width: 480px) {
-    .page-header h1 {
-        font-size: 1.8rem;
-    }
-
-
     .dropdown-content {
         position: static;
-        transform: none;
-        opacity: 1;
-        visibility: visible;
-        pointer-events: auto;
+        opacity: 0;
+        max-height: 0;
+        overflow: hidden;
+        pointer-events: none;
+        transition: max-height 0.4s ease, opacity 0.3s ease;
         background: rgba(0, 0, 0, 0.4);
+        border-radius: 20px;
         margin-top: 10px;
     }
 
-    .dropdown:hover .dropdown-content {
-        transform: none;
-    }
-
-    .page-main img {
-        max-width: 90%;
-    }
-
-    .mainContentText img,
-    .mainContentText2 img,
-    .mainContentText3 img {
-        max-width: 15%;
-    }
-
-    .footer .social-media {
-        flex-direction: column;
-        gap: 10px;
+    .dropdown:focus-within .dropdown-content {
+        opacity: 1;
+        max-height: 500px;
+        pointer-events: auto;
     }
 }
 
-
-@media (max-width: 360px) {
-    body {
-        font-size: 14px;
-    }
-
-
-
-    .mainContentText h2,
-    .mainContentText2 h2,
-    .mainContentText3 h2 {
-        font-size: 1.5rem;
-    }
-
-    .producten-button {
-        width: 100%;
-        text-align: center;
+@media (hover: none) {
+    .dropdown:hover .dropdown-content {
+        opacity: 0;
+        visibility: hidden;
     }
 }
