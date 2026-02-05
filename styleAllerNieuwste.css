@@ -3,7 +3,9 @@
     --color-secondary: hsl(331, 50%, 10%);
     --color-tertiary: hsl(31, 100%, 31%);
     --color-accent: hsl(271, 80%, 20%);
-    --color-text: white;
+    --color-text: rgb(255, 255, 255);
+    --color-textvlakken:rgba(121, 121, 121, 0.623);
+
 }
 
 .dark {
@@ -18,7 +20,9 @@
 *::after {
     box-sizing: border-box;
 }
-html, body {
+
+html,
+body {
     max-width: 100vw;
 }
 
@@ -50,6 +54,7 @@ body img {
     height: 100vh;
     object-fit: cover;
 }
+
 .grid {
     display: grid;
     grid-template-columns: 235px 1fr 235px;
@@ -139,6 +144,7 @@ body img {
     max-width: 235px;
     align-self: flex-start;
     color: var(--color-secondary);
+    background-color: var(--color-textvlakken);
 }
 
 .page-leftbar {
@@ -175,7 +181,10 @@ body img {
 .mainContentText,
 .mainContentText img,
 .mainContentText2,
-.mainContentText3 {
+.mainContentText3,
+.mainContentText4,
+.mainContentText5 img,
+.mainContentText5 {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -183,7 +192,7 @@ body img {
     color: var(--color-text);
     padding: 40px 25px;
     border-radius: 25px;
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: var(--color-textvlakken);
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     max-width: 2000px;
     width: 100%;
@@ -192,7 +201,9 @@ body img {
 
 .mainContentText p,
 .mainContentText2 p,
-.mainContentText3 p {
+.mainContentText3 p,
+.mainContentText4 p,
+.mainContentText5 p {
     font-size: 1.2rem;
     line-height: 1.5;
     margin-bottom: 20px;
@@ -205,7 +216,9 @@ body img {
 
 .mainContentText h2,
 .mainContentText2 h2,
-.mainContentText3 h2 {
+.mainContentText3 h2,
+.mainContentText4 h2,
+.mainContentText5 h2 {
     font-size: 2rem;
     margin-bottom: 20px;
 }
@@ -217,7 +230,9 @@ body img {
 
 .mainContentText img,
 .mainContentText2 img,
-.mainContentText3 img {
+.mainContentText3 img,
+.mainContentText4 img,
+.mainContentText5 img {
     max-width: 5%;
     height: auto;
     bottom: 0;
@@ -293,6 +308,7 @@ body::before {
 .keyboard-nav button:focus {
     outline-offset: 4px;
 }
+
 .dropdown {
     position: relative;
 }
@@ -302,7 +318,7 @@ body::before {
     top: 100%;
     left: 50%;
     transform: translateX(-50%) translateY(10px);
-    background: rgba(0, 0, 0, 0.85);
+    background: var(--color-textvlakken);
     border-radius: 20px;
     padding: 10px 0;
     min-width: 180px;
@@ -391,6 +407,7 @@ body::before {
     box-shadow: 0 0 20px #000000;
     padding: 10px 20px;
 }
+
 .page-leftbar,
 .page-rightbar {
     margin: 0 auto;
@@ -412,30 +429,37 @@ body::before {
 
 .mainContentText,
 .mainContentText2,
-.mainContentText3 {
+.mainContentText3,
+.mainContentText4,
+.mainContentText5 {
     padding: 30px 20px;
 }
 
 .mainContentText p,
 .mainContentText2 p,
-.mainContentText3 p {
+.mainContentText3 p,
+.mainContentText4 p,
+.mainContentText5 p {
     font-size: 1.1rem;
 }
 
 .mainContentText h2,
 .mainContentText2 h2,
-.mainContentText3 h2 {
+.mainContentText3 h2,
+.mainContentText4 h2,
+.mainContentText5 h2 {
     font-size: 1.5rem;
 }
 
 @media (max-width: 4000px) {
-        .page-main img {
+    .page-main img {
         max-width: 10%;
         padding: 20px 20px;
     }
 }
 
 @media (max-width: 1200px) {
+
     .page-leftbar,
     .page-rightbar {
         display: none;
@@ -463,10 +487,12 @@ body::before {
         justify-content: center;
         flex-wrap: wrap;
     }
+
     .page-main img {
         max-width: 100px;
         padding: 20px 20px;
     }
+
     .sidebar-right,
     .sidebar-left {
         display: none;
@@ -487,14 +513,18 @@ body::before {
 
     .mainContentText,
     .mainContentText2,
-    .mainContentText3 {
+    .mainContentText3,
+    .mainContentText4,
+    .mainContentText5 {
 
         padding: 20px 15px;
     }
+
     .page-main img {
         max-width: 75px;
         padding: 20px 20px;
     }
+
     .sidebar-right,
     .sidebar-left {
         display: none;
@@ -516,8 +546,7 @@ body::before {
 
 
 
--------------------------------------------------------------------------
-.contact-content {
+------------------------------------------------------------------------- .contact-content {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -525,7 +554,7 @@ body::before {
     padding: 40px 25px;
     border-radius: 25px;
     background-color: rgba(255, 255, 255, 0.2);
-    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     color: var(--color-text);
     max-width: 900px;
     margin: 0 auto;
@@ -612,9 +641,11 @@ body::before {
     .contact-content {
         padding: 25px 15px;
     }
+
     .contact-content h3 {
         font-size: 1.5rem;
     }
+
     .contact-content form button {
         width: 100%;
     }
@@ -632,13 +663,13 @@ body::before {
     border-radius: 20px;
     padding: 15px;
     text-align: center;
-    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .sleutelhanger-item:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 25px rgba(0,0,0,0.5);
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
 }
 
 .sleutelhanger-item img {
