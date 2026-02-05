@@ -360,7 +360,7 @@ body::before {
     transition: color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.producten-button {
+.submit-button {
     transition: all 1.5s ease;
     border: 1px solid var(--color-text);
     color: var(--color-text);
@@ -369,7 +369,7 @@ body::before {
     padding: 10px 20px;
 }
 
-.producten-button:hover {
+.submit-button:hover {
     color: var(--color-tertiary);
     transform: scale(1.15);
     box-shadow: 0 0 20px #000000;
@@ -604,4 +604,42 @@ body::before {
     .contact-content form button {
         width: 100%;
     }
+}
+
+.sleutelhanger-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    padding: 20px 10px;
+}
+
+.sleutelhanger-item {
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sleutelhanger-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(0,0,0,0.5);
+}
+
+.sleutelhanger-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+    margin-bottom: 10px;
+}
+
+.sleutelhanger-item h3 {
+    margin: 10px 0 5px;
+    font-size: 1.2rem;
+}
+
+.sleutelhanger-item p {
+    font-size: 1rem;
+    line-height: 1.4;
 }
