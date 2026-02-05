@@ -322,7 +322,9 @@ body::before {
 }
 
 .dropdown-content a:hover {
-    background: rgba(255,255,255,0.1);
+    color: var(--color-text);
+    transform: scale(1.05);
+    transition: all 0.50s ease;
 }
 
 .dropdown:hover .dropdown-content,
@@ -331,6 +333,7 @@ body::before {
     visibility: visible;
     pointer-events: auto;
     transform: translateX(-50%) translateY(0);
+    transition: all 0.50s ease;
 }
 
 .dropbtn,
@@ -485,3 +488,120 @@ body::before {
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-------------------------------------------------------------------------
+.contact-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 40px 25px;
+    border-radius: 25px;
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    color: var(--color-text);
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact-content h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.contact-content ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 30px;
+}
+
+.contact-content ul li {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.contact-content ul li a {
+    color: var(--color-text);
+    text-decoration: underline;
+}
+
+.contact-content ul li a:hover {
+    color: var(--color-tertiary);
+}
+
+.contact-content form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+}
+
+.contact-content form label {
+    font-weight: bold;
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+.contact-content form input,
+.contact-content form textarea {
+    width: 100%;
+    padding: 10px 15px;
+    border-radius: 15px;
+    border: 1px solid var(--color-text);
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--color-text);
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.contact-content form input:focus,
+.contact-content form textarea:focus {
+    outline: none;
+    border-color: var(--color-tertiary);
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.contact-content form button {
+    width: fit-content;
+    align-self: center;
+    padding: 12px 25px;
+    font-size: 1rem;
+    border-radius: 50px;
+    border: 1px solid var(--color-text);
+    background-color: transparent;
+    color: var(--color-text);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.contact-content form button:hover {
+    color: var(--color-tertiary);
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #000;
+}
+
+@media (max-width: 900px) {
+    .contact-content {
+        padding: 25px 15px;
+    }
+    .contact-content h3 {
+        font-size: 1.5rem;
+    }
+    .contact-content form button {
+        width: 100%;
+    }
+}
