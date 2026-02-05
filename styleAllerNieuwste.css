@@ -211,7 +211,7 @@ body img {
 }
 
 .page-main img {
-    max-width: 50%;
+    max-width: 60%;
     height: auto;
 }
 
@@ -380,6 +380,7 @@ body::before {
     max-width: 90%;
     width: 100%;
     text-align: center;
+    color: var(--color-text);
 }
 
 .TopNav {
@@ -410,6 +411,21 @@ body::before {
     font-size: 1.5rem;
 }
 
+@media (max-width: 4000px) {
+        .page-main img {
+        max-width: 10%;
+        padding: 20px 20px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .page-leftbar,
+    .page-rightbar {
+        display: none;
+    }
+
+}
+
 
 @media (max-width: 900px) {
     .grid {
@@ -434,6 +450,10 @@ body::before {
         max-width: 100px;
         padding: 20px 20px;
     }
+    .sidebar-right,
+    .sidebar-left {
+        display: none;
+    }
 
 }
 
@@ -457,6 +477,10 @@ body::before {
     .page-main img {
         max-width: 75px;
         padding: 20px 20px;
+    }
+    .sidebar-right,
+    .sidebar-left {
+        display: none;
     }
 }
 
