@@ -447,7 +447,7 @@ body::before {
         padding: 20px 15px;
     }
     .page-main img {
-        max-width: 4.5%;
+        max-width: 50px;
         padding: 20px 20px;
     }
 }
