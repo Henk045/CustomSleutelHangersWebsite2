@@ -376,7 +376,21 @@ body::before {
     padding: 10px 20px;
 }
 
+.producten-button {
+    transition: all 1.5s ease;
+    border: 1px solid var(--color-text);
+    color: var(--color-text);
+    border-radius: 50px;
+    text-decoration: none;
+    padding: 10px 20px;
+}
 
+.producten-button:hover {
+    color: var(--color-tertiary);
+    transform: scale(1.15);
+    box-shadow: 0 0 20px #000000;
+    padding: 10px 20px;
+}
 .page-leftbar,
 .page-rightbar {
     margin: 0 auto;
