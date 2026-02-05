@@ -12,8 +12,14 @@
     --color-tertiary: hsl(31, 80%, 80%);
     --color-accent: hsl(271, 80%, 80%);
 }
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
 html, body {
-    height: 100%;
+    max-width: 100vw;
 }
 
 html {
@@ -28,21 +34,22 @@ body {
     height: 100%;
     font-family: var(--font-family);
     scroll-behavior: smooth;
-    background-attachment: fixed;
+    background-attachment: scroll;
 }
 
 body img {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    margin: 0;
+    position: static;
+    width: auto;
+    height: auto;
 }
 
+.backgroundImage img {
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+}
 .grid {
     display: grid;
     grid-template-columns: 235px 1fr 235px;
@@ -423,8 +430,9 @@ body::before {
         justify-content: center;
         flex-wrap: wrap;
     }
-    .mainContent img {
-        max-width: 10%;
+    .page-main img {
+        max-width: 100px;
+        padding: 20px 20px;
     }
 
 }
@@ -447,7 +455,9 @@ body::before {
         padding: 20px 15px;
     }
     .page-main img {
-        max-width: 50px;
+        max-width: 75px;
         padding: 20px 20px;
     }
 }
+
+
